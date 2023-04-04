@@ -1,0 +1,84 @@
+.container {
+    margin: auto;
+    text-align: center;
+    width: 80%;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+  
+  .scoreboard {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .win-score,
+  .lose-score {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .boxes {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .box {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    margin-right: 20px;
+  }
+  
+  .color-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .color-btn {
+    font-size: 24px;
+    margin: 0 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button-container {
+    margin-top: 50px;
+  }
+  
+  button {
+    font-size: 24px;
+    margin: 0 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+  }
+  
+  .modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content
+  
