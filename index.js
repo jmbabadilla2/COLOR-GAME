@@ -6,6 +6,7 @@ let modal = document.getElementById('modal');
 let modalText = document.getElementById('modal-text');
 let yesButton = document.getElementById('yes-button');
 let noButton = document.getElementById('no-button');
+let audio = new Audio('images/playEffect.wav');
 
 function sparkle1() {
   let box1 = document.getElementById('box1');
@@ -37,6 +38,8 @@ function start() {
   interval3 = setInterval(sparkle3, 100);
   document.getElementById('start').disabled = true;
   document.querySelectorAll('.color-btn').forEach(btn => btn.disabled = false);
+  audio.loop = true;
+  audio.play();
 }
 
 function stop() {
@@ -51,6 +54,7 @@ function stop() {
 function chooseColor(color) {
   chosenColor = color;
   checkColor();
+  audio.pause();
 }
 
 function checkColor() {
@@ -70,16 +74,21 @@ function checkColor() {
       showModal();
     } else {
       alert('You win!');
+      
     }
   } else {
     loseScore++;
+
     document.getElementById('loseScore').innerText = loseScore;
     stop();
     if (loseScore === 10) {
       modalText.innerText = 'You lose! Do you want to play again?';
       showModal();
     } else {
+      let audio1 = new Audio('image/gamelose.wav');
+      audio1.play();
       alert('You lose!');
+      
     }
   }
 }

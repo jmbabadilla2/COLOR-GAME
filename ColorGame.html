@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Game</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    
+  </header>
+    <div class="container">
+        <h1>Color Game</h1>
+        <div class="scoreboard">
+          <div class="win-score">Wins <br> <div class ="win" ><center id="winScore">0</center></div></div>
+          <div class="lose-score">Losses <br> <div class="lose" ><center id="loseScore">0</center></div></div>
+        </div>
+        <div class="boxes">
+          <div id="box1" class="box"></div>
+          <div id="box2" class="box"></div>
+          <div id="box3" class="box"></div>
+        </div>
+        <div class="color-buttons">
+           <span id="1" class="color-btn1" onclick="chooseColor('red')"><a href="#"></a></span>
+           <span id="2" class="color-btn2" onclick="chooseColor('green')"><a href="#"></a></span>
+           <span id="3" class="color-btn3" onclick="chooseColor('blue')"><a href="#"></a></span>
+           <span id="4" class="color-btn4" onclick="chooseColor('yellow')"><a href="#"></a></span>
+          <!-- <button class="color-btn" onclick="chooseColor('red')">Red</button>
+          <button class="color-btn" onclick="chooseColor('green')">Green</button>
+          <button class="color-btn" onclick="chooseColor('blue')">Blue</button>
+          <button class="color-btn" onclick="chooseColor('yellow')">Yellow</button> -->
+        </div>
+        <div class="button-container">
+          <button id="start" onclick="start()">Start</button>
+          <button id="stop" onclick="stop()" disabled>Stop</button>
+        </div>
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <h2 id="modal-text">Do you want to play again?</h2>
+            <div class="modal-buttons">
+              <button class="modal-btn" id="yes-button" onclick="playAgain()">Yes</button>
+              <button class="modal-btn" id="no-button" onclick="quitGame()">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

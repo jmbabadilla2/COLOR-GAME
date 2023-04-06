@@ -1,0 +1,148 @@
+:root {
+    --main-color: rgb(92,16,16);
+    --text-color: rgb(86,13,13);
+    --bg-color: rgb(195,1,1);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-image: url(/images/casino.png);
+    background-size: cover;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+header {
+    margin-bottom: 100px;
+    width: 100vw;
+    height: 100px;
+}
+
+header a{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+header img{
+    margin-top: 10px;
+    width: 65px;
+    height: 80px;
+}
+
+
+/* button 1 */
+.mario-block {
+    display: flex;
+    width: 300px;
+    height: 250px;
+    margin-bottom: 20px;
+  }
+
+.mario-block img {
+    width: 300px;
+    height: 250px;
+}
+  
+  #wahoo {
+    outline: none;
+  }
+
+#wahoo:active + .mario-block {
+    animation: wahooMario 0.8s ease-in-out 1;
+  }
+  
+  @keyframes wahooMario {
+    0%,
+    100% {
+      transform: translate(0%, 0%);
+    }
+    50% {
+      transform: translate(0%, -50%);
+    }
+  }
+  
+  .button {
+    order: 1;
+    position: relative;
+    background: orangered;
+    border: none;
+    color: white;
+    
+    box-shadow: -6px 6px 0 hsl(16, 100%, 30%);
+    outline: none;
+    border-radius: 10px;
+  }
+  
+  .button:hover {
+    background: hsl(16, 100%, 45%);
+  }
+  
+  .button:active {
+    background: hsl(16, 100%, 40%);
+    top: 3px;
+    left: -3px;
+    box-shadow: -3px 3px 0 hsl(16, 100%, 30%);
+  }
+  
+  .button::before {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    border: solid 6px transparent;
+    border-right: solid 6px hsl(16, 100%, 30%);
+    border-left-width: 0px;
+    background: none;
+    top: 0px;
+    left: -6px;
+  }
+  
+  .button::after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    border: solid 6px transparent;
+    border-top: solid 6px hsl(16, 100%, 30%);
+    border-bottom-width: 0px;
+    background: none;
+    right: 0;
+    bottom: -6px;
+  }
+  
+  .button:active::before {
+    border: solid 3px transparent;
+    border-right: solid 3px hsl(16, 100%, 30%);
+    border-left-width: 0px;
+    left: -3px;
+  }
+  
+  .button:active::after {
+    border: solid 3px transparent;
+    border-top: solid 3px hsl(16, 100%, 30%);
+    border-bottom-width: 0px;
+    bottom: -3px;
+  }
+button {
+    background: none;
+    border-style: none;
+    padding: 15px 24px;
+    font-size: 1.4rem;
+}  
