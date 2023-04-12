@@ -14,8 +14,13 @@ body {
   }
   
   h1 {
-    font-size: 36px;
+    
     margin-top: 20px;
+  }
+
+  .LOGO {
+    height: 80px;
+    width: 150px;
   }
   
   .scoreboard {
