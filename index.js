@@ -8,6 +8,7 @@ let yesButton = document.getElementById('yes-button');
 let noButton = document.getElementById('no-button');
 let audio = new Audio('images/playEffect.wav');
 
+
 function sparkle1() {
   let box1 = document.getElementById('box1');
   let colors = ['red', 'green', 'blue', 'yellow'];
@@ -52,9 +53,15 @@ function stop() {
 }
 
 function chooseColor(color) {
-  chosenColor = color;
-  checkColor();
-  audio.pause();
+  if (document.getElementById('start').disabled === true) {
+    chosenColor = color;
+    checkColor();
+    audio.pause();
+    document.querySelectorAll('.color-btn').forEach(btn => btn.disabled = true);
+  } else {
+    alert('Di mo pa pinipindot yung Start button!');
+    document.querySelectorAll('.color-btn').forEach(btn => btn.disabled = true);
+  }
 }
 
 function checkColor() {
@@ -69,6 +76,8 @@ function checkColor() {
     winScore++;
     document.getElementById('winScore').innerText = winScore;
     stop();
+    let audio2 = new Audio('images/win.wav');
+      audio2.play();
     if (winScore === 10) {
       modalText.innerText = 'You win! Do you want to play again?';
       showModal();
@@ -81,13 +90,13 @@ function checkColor() {
 
     document.getElementById('loseScore').innerText = loseScore;
     stop();
+    let audio1 = new Audio('images/gamelose.wav');
+      audio1.play();
     if (loseScore === 10) {
       modalText.innerText = 'You lose! Do you want to play again?';
       showModal();
     } else {
-      let audio1 = new Audio('image/gamelose.wav');
-      audio1.play();
-      alert('You lose!');
+      alert('talo ka!');
       
     }
   }
