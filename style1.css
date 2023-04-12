@@ -16,7 +16,7 @@
 }
 
 body {
-    background-image: url(/images/casino.png);
+    background-image: url(images/casino.png);
     background-size: cover;
     display: flex;
   flex-direction: column;
